@@ -1,0 +1,303 @@
+<?php require_once( 'couch/cms.php' ); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <cms:editable name='page_title' type='text'>About</cms:editable>
+    </title>
+    <link rel="author" href="humans.txt">
+    <link rel="canonical" href="#">
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    <meta name="description" content="Practical and friendly advice covering divorce and more">
+    <meta name="robots" content="index, follow">
+    <meta property="fb:app_id" content="123456789">
+    <meta property="og:url" content="www.divorceandwellbeing.co.uk">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Divorce and Wellbeing">
+    <meta property="og:description" content="Practical and friendly advice covering divorce and more">
+    <meta property="og:site_name" content="Divorce and Wellbeing">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="www.divorceandwellbeing.co.uk">
+    <meta name="twitter:title" content="Divorce and Wellbeing">
+    <meta name="twitter:description" content="Practical and friendly advice covering divorce and more">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <meta name="apple-mobile-web-app-title" content="Divorce and Wellbeing">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans:300,400,400i,700" rel="stylesheet">
+    <!-- build:css style/style.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- endbuild -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/brand/favicons/apple-touch-icon.png?v=6">
+    <link rel="icon" type="image/png" href="img/brand/favicons/favicon-32x32.png?v=6" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/brand/favicons/favicon-16x16.png?v=6" sizes="16x16">
+    <link rel="manifest" href="img/brand/favicons/manifest.json?v=6">
+    <link rel="mask-icon" href="img/brand/favicons/safari-pinned-tab.svg?v=6" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="img/brand/favicons/mstile-144x144.png?v=6">
+    <meta name="msapplication-config" content="img/brand/favicons/browserconfig.xml?v=6">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="nav-mobile">
+        <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="news.html">News</a><a href="who-we-are.html">Who we are</a><a href="wellbeing.html">Wellbeing</a>
+        </nav>
+        <div class="social">
+            <a class="social-fb" href="https://www.facebook.com/Divorce-and-Wellbeing-1781847755397293/" target="_blank"></a>
+            <a class="social-tw" href="https://twitter.com/dwb3757" target="_blank"></a>
+            <a class="social-li" href="https://www.linkedin.com/company/divorce-and-wellbeing" target="_blank"></a>
+            <a class="social-im" href="https://www.instagram.com/divorceandwellbeing/?hl=en" target="_blank"></a>
+        </div>
+    </nav>
+    <header>
+        <section>
+            <a href="index.html">
+                <img class="logo-main" src="img/brand/logo-main.png" />
+            </a>
+            <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="news.html">News</a><a href="who-we-are.html">Who we are</a><a href="wellbeing.html">Wellbeing</a>
+            </nav>
+            <p class="icon-menu"></p>
+            <div class="social">
+                <a class="social-fb" href="https://www.facebook.com/Divorce-and-Wellbeing-1781847755397293/" target="_blank"></a>
+                <a class="social-tw" href="https://twitter.com/dwb3757" target="_blank"></a>
+                <a class="social-li" href="https://www.linkedin.com/company/divorce-and-wellbeing" target="_blank"></a>
+                <a class="social-im" href="https://www.instagram.com/divorceandwellbeing/?hl=en" target="_blank"></a>
+            </div>
+        </section>
+    </header>
+    <cms:template title="About page">
+    </cms:template>
+    <main>
+        <section class="about">
+            <div class="inner">
+                <cms:editable name='about_group' label='About' desc='About section content' type='group'></cms:editable>
+                <article>
+                    <h1><cms:editable name='about_header' type='text' group='about_group'>About Divorce and Wellbeing</cms:editable></h1>
+                    <h2><cms:editable name='about_section_header' type='text' group='about_group'>How will we help you?</cms:editable></h2>
+                    <p>
+                        <cms:editable name='about_section_intro' type='text' group='about_group'>We will meet you for an initial assessment to understand where you are and will draw you a roadmap tailored to your individual needs. Divorce is a long process which requires endurance and stability. We understand only too well
+                            how overwhelming things can seem in difficult times and will provide you with a plan to look after your wellness along your journey. This will help you to stay calm and make the right decisions with the right state of mind.
+                            We will meet you on a regular basis to follow up with you and be there to guide you in every step you take.</cms:editable>
+                    </p>
+                    <cms:editable name='about_img' label='about_img' type='image' show_preview='1' hidden='1' group='about_group'></cms:editable>
+                    <img src="<cms:show about_img />" />
+                    <h3><cms:editable name='about_subsection_header' type='text' group='about_group'>In-house legal advice</cms:editable></h3>
+                    <p>
+                        <cms:editable name='about_subsection_content' type='text' group='about_group'>Our legal expert will talk you through the legal options; discuss your lawyer’s advice with you; help you prepare for meetings with your solicitor or your barrister and tackle the forms and paperwork with you, saving you time,
+                            money and confusion. In an inexpensive and relaxed environment, you are free to ask the 'stupid' questions (there aren't any), to ponder, deliberate and discuss your issues and options with a legal expert who has been there
+                            herself and understands how heartache can cloud the picture even for the most clearheaded woman.</cms:editable>
+                    </p>
+                    <h3><cms:editable name='about_subsection_header_2' type='text' group='about_group'>It is all about you</cms:editable></h3>
+                    <p>
+                        <cms:editable name='about_subsection_content_2' type='text' group='about_group'>We will work with you from start to finish to provide a bespoke service tailored to your individual needs. We can call on mediators, divorce lawyers, financial advisors, counsellors, therapists for your children, wellness experts
+                            and many more. We can even look after your day to day needs taking care of housing, nannies and even the grocery shopping! And when you are ready, we will be there to show you the way back to work or help you in your search
+                            for a new partner. We will stay with you until you are in charge of your life again and will be there to celebrate your independence with you.</cms:editable>
+                    </p>
+                    <div class="personal-story">
+                        <cms:editable name='story_group' label='Story' desc='Story section content' type='group'></cms:editable>
+                        <div class="narrative">
+                            <h2><cms:editable name='story_header' type='text' group='story_group'>My story</cms:editable></h2>
+                            <cms:editable name='story_img' label='story_img' type='image' show_preview='1' hidden='1' group='story_group'></cms:editable>
+                            <picture>
+                                <img src="<cms:show story_img />" />
+                            </picture>
+                            <p>
+                                <cms:editable name='story_content' type='text' group='story_group'>I moved to London in the late nineties as a young married woman. In the beginning, it was an exciting experience for both of us, however it wasn't long before my marriage was showing signs that something was wrong. I started
+                                    feeling isolated and worried, and eventually I faced the inevitability of divorce. Even the simplest of everyday tasks became impossible and my life descended into a living hell. I was feeling desperate and alone with
+                                    a toddler and baby to look after, with no job or financial security. I was too embarrassed to share the reality with my family who were in another country.</cms:editable>
+                            </p>
+                            <blockquote>
+                                <p>
+                                    <cms:editable name='story_quote' type='text' group='story_group'>Now I feel stronger than ever</cms:editable>
+                                </p>
+                            </blockquote>
+                            <p>
+                                <cms:editable name='story_content_2' type='text' group='story_group'>In a year’s time, a divorce settlement was reached mostly with the support of my dear friends to whom I will always feel indebted. I was through the worst part, but the path was still scary. I had gone from my parents’
+                                    home straight into my marriage and felt I had never really had a life of my own. It took me many years to know who I was, build my confidence back and live my life as an independent woman. Now I feel stronger than ever.
+                                    I have started Divorce and Wellbeing to use my experience to help and support you in your journey so you don’t have to go through this devastating experience on your own.</cms:editable>
+                            </p>
+                            <p><strong><cms:editable name='story_author' type='text' group='story_group'>Thanks for reading - Ebru</cms:editable></strong>
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#story"></a>
+                </article>
+                <div class="services">
+                    <cms:editable name='services_group' label='Services' desc='Services section content' type='group'></cms:editable>
+                    <div class="service-list">
+                        <h2><cms:editable name='services_header' type='text' group='services_group'>Our services</cms:editable></h2>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-address-book">Consultation</h3>
+                            </header>
+                            <cms:editable name='services_list_1' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>In-house sessions for personal consultancy</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-hammer">Legal</h3>
+                            </header>
+                            <cms:editable name='services_list_2' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>In-house legal advice</li>
+                                    <li>Family lawyers</li>
+                                    <li>Mediators</li>
+                                    <li>Arbitrators</li>
+                                    <li>Immigration lawyers</li>
+                                    <li>Tax and private client services</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-dollar">Financial</h3>
+                            </header>
+                            <cms:editable name='services_list_3' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>Financial advisors</li>
+                                    <li>Accountants</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-users">Therapists</h3>
+                            </header>
+                            <cms:editable name='services_list_4' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>Individual therapy</li>
+                                    <li>Marriage counselling</li>
+                                    <li>Child and adolescent therapy</li>
+                                    <li>Group therapy</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-tree-2">Wellness</h3>
+                            </header>
+                            <cms:editable name='services_list_5' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>Meditation</li>
+                                    <li>Breathing and relaxation</li>
+                                    <li>Yoga</li>
+                                    <li>Pilates</li>
+                                    <li>Retreats</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-home">Housing</h3>
+                            </header>
+                            <cms:editable name='services_list_6' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>Estate agents</li>
+                                    <li>Removal companies</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-child">Childcare</h3>
+                            </header>
+                            <cms:editable name='services_list_7' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>Nannies</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-chat">Social</h3>
+                            </header>
+                            <cms:editable name='services_list_8' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>Support groups - monthly events with experts</li>
+                                    <li>Workshops for wellbeing</li>
+                                    <li>Exclusive socialising events</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-heart">Dating</h3>
+                            </header>
+                            <cms:editable name='services_list_9' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>Advice for dating following separation</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                        <div class="service">
+                            <header>
+                                <h3 class="icon-briefcase">Back to work</h3>
+                            </header>
+                            <cms:editable name='services_list_10' type='nicedit' buttons='italic' group='services_group'>
+                                <ul>
+                                    <li>CV writing</li>
+                                    <li>Interview techniques</li>
+                                    <li>Recruitment agencies</li>
+                                    <li>Tailored training for continuous professional development</li>
+                                </ul>
+                            </cms:editable>
+                        </div>
+                    </div>
+                    <div class="call-to-action">
+                        <div class="call-to-action-content">
+                            <h2><cms:editable name='services_header' type='text' group='services_group'>Contact us today</cms:editable></h2><a class="email" href="mailto:info@divorceandwellbeing.co.uk">info@divorceandwellbeing.co.uk</a><a class="phone" href="tel:08455443757">08455443757</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="inner">
+                <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="news.html">News</a><a href="who-we-are.html">Who we are</a><a href="wellbeing.html">Wellbeing</a>
+                </nav>
+                <div class="brand-legal">
+                    <img src="img/brand/logo-white.png" />
+                    <p>© Divorce and Wellbeing 2016<a href="legal.php">Terms and Conditions</a>
+                    </p>
+                </div>
+                <div class="contact-social">
+                    <div class="social">
+                        <a class="social-fb" href="https://www.facebook.com/Divorce-and-Wellbeing-1781847755397293/" target="_blank"></a>
+                        <a class="social-tw" href="https://twitter.com/dwb3757" target="_blank"></a>
+                        <a class="social-li" href="https://www.linkedin.com/company/divorce-and-wellbeing" target="_blank"></a>
+                        <a class="social-im" href="https://www.instagram.com/divorceandwellbeing/?hl=en" target="_blank"></a>
+                    </div><a class="email" href="mailto:info@divorceandwellbeing.co.uk">info@divorceandwellbeing.co.uk</a><a class="phone" href="tel:08455443757">08455443757</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- build:js script/script.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- inject:imports -->
+    <script src="script/components/test.js"></script>
+    <!-- endinject -->
+    <script src="script/script.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
+<?php COUCH::invoke(); ?>

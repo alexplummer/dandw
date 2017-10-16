@@ -1,0 +1,46 @@
+extends includes/_header
+
+block title
+	title <cms:editable name='page_title' type='text'>Blog</cms:editable>
+
+block main
+
+	<cms:template title="Blog post" clonable="1" commentable="1">
+	</cms:template>
+
+	main
+		section.news
+			.inner
+				article
+					h1 <cms:editable name='article_header' type='text'>Enter the blog header here</cms:editable>
+					div.details
+						time
+							| <cms:date k_page_date format='jS M, y'/>
+						p
+							| <cms:show k_comments_count />&nbsp; Comments
+						<div class="addthis_inline_share_toolbox"></div>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c6759b75b46ce8"></script>
+
+					p <cms:editable name='article_prefix' type='text'> Dear Readers,</cms:editable>
+					p <cms:editable name='article_standfirst' type='text'>Enter the first paragraph here</cms:editable>
+
+					<cms:editable name='article_img' label='article_img' type='image' show_preview='1' hidden='1'></cms:editable>
+					img(src!="<cms:show article_img />")
+
+					<cms:editable name='article_body' type='nicedit' buttons='italic,bold,link,unlink,ol,ul,image,subscript,superscript'>
+					p
+						| Add the rest of the article content here
+					</cms:editable>
+
+					h3 Read more:
+					<cms:editable name='article_readmore' type='nicedit' buttons=''>
+					ul
+						li
+							a(href="http://www.familylaw.co.uk/news_and_comment/family-lawyers-gather-in-parliament-to-call-for-no-fault-divorce#.WECKyeaLSUm")
+								| Type the name of a link here, select text then click the link button
+					</cms:editable>
+
+					<cms:embed 'comment-displays.inc' />
+					<cms:embed 'comment-forms.inc' />
+
+	include includes/_footer

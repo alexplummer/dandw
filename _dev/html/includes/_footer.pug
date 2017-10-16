@@ -1,0 +1,23 @@
+footer
+	section
+		.inner
+			include _nav
+
+			.brand-legal
+				img(src="img/brand/logo-white.png")
+				p
+					| © Divorce and Wellbeing 2016
+					a(href="legal.php") Terms and Conditions
+
+			.contact-social
+				.social
+					a(href=fb, target="_blank").social-fb
+					a(href=tw, target="_blank").social-tw
+					a(href=li, target="_blank").social-li
+					a(href=im, target="_blank").social-im
+
+				a(href="mailto:"+email).email #{email}
+				a(href="tel:"+phone).phone #{phone}
+
+
+include _under

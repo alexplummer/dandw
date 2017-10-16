@@ -1,0 +1,60 @@
+// Footer
+// ============
+
+footer {
+    background: $clr-primary;
+    padding: $size-m 0;
+
+    *, a {
+        color: #fff;
+    }
+    nav {
+        @extend %col-md-3;
+        a {
+            @extend .icon;
+            @extend .icon-right-open;
+            @extend %mid-caps;
+            display: block;
+            text-decoration: none;
+            margin-bottom: $size-s;
+        }
+    }
+    .brand-legal {
+        @extend %col-md-4;
+        @extend %col-md-offset-1;
+        text-align: center;
+
+        img {
+            max-width: 200px;
+        }
+        p, a {
+            font-size: $font-xs;
+        }
+        a {
+            margin-left: $size-s;
+        }
+    }
+    .contact-social {
+        @extend %col-md-3;
+        @extend %col-md-offset-1;
+        text-align: right;
+
+        > a {
+            display: block;
+            margin-bottom: 0;
+        }
+    }
+    @media (max-width: 991px) {
+
+        nav, .contact-social {
+            display: none;
+        }
+        .brand-legal {
+            margin: 0 auto;
+
+            a {
+                display: block;
+            }
+        }
+    }
+}

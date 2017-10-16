@@ -1,0 +1,33 @@
+extends _head
+
+block title
+	title Divorce and Wellbeing
+
+block content
+	include ../vars/_global-vars
+
+	nav.nav-mobile
+		include _nav
+		
+		.social
+				a(href=fb, target="_blank").social-fb
+				a(href=tw, target="_blank").social-tw
+				a(href=li, target="_blank").social-li
+				a(href=im, target="_blank").social-im
+
+	header
+		section
+			a(href="index.html")
+				img(src="img/brand/logo-main.png").logo-main
+
+			include _nav
+
+			p.icon-menu
+
+			.social
+				a(href=fb, target="_blank").social-fb
+				a(href=tw, target="_blank").social-tw
+				a(href=li, target="_blank").social-li
+				a(href=im, target="_blank").social-im
+
+	block main

@@ -1,0 +1,59 @@
+extends includes/_header
+
+block title
+	title <cms:editable name='page_title' type='text'>Contact</cms:editable>
+
+block main
+
+	<cms:template title="Contact page">
+	</cms:template>
+
+	main
+		section.contact
+			.inner
+				article
+					h1 <cms:editable name='contact_header' type='text'>Contact Divorce and Wellbeing</cms:editable>
+					p <cms:editable name='contact_description' type='text'>Get in touch now and let us know how and when we can most conveniently contact you for a confidential conversation - or call us direct on: &nbsp;</cms:editable> <a href="tel:"+phone class="phone">#{phone}</a>
+
+					form(name="phpformmailer",action="script/form.php",method="post",class="contact-form")
+						label(for="full-name") Full name*
+						input(type="text",id="contact-name",name="full-name",placeholder="Enter your name")
+						br
+						label(for="email") Email*
+						input(type="text",id="contact-email",name="email",placeholder="Enter your email")
+						br
+						label(for="phone") Phone
+						input(type="text",id="contact-phone",name="phone",placeholder="Enter your phone")
+						br
+						label(for="message") Message
+						textarea(id="contact-message",name="message",placeholder="Enter your message",rows="4",cols="50")
+						br
+						input(type="submit",value="Submit",id="contact-submit")
+
+				.highlight-list
+					.contact-quotes
+							<cms:repeatable name='contactQuotes'>
+								<cms:editable name='contactquote' label="Quote" type='text'  />
+								<cms:editable name='contactquoteAuthor' label="Quote Author" type='text' />
+							</cms:repeatable>
+							<cms:show_repeatable 'contactQuotes'>
+								<blockquote><cms:show contactquote /><span><cms:show contactquoteAuthor /></span></blockquote>
+							</cms:show_repeatable>
+					.highlight
+						header
+							h2 <cms:editable name='service_header' type='text'>Some of our services</cms:editable>
+						<cms:editable name='services_list' type='nicedit' buttons='italic' group='services_group'>
+						ul
+							li In-house sessions for personal consultancy and legal advice
+							li Legal services
+							li Financial advisory
+							li Therapeutic services
+							li Wellness
+							li Social events
+						</cms:editable>
+						footer
+							h3 To find out more:
+							a(href="mailto:"+email).email #{email}
+							a(href="tel:"+phone).phone #{phone}
+
+	include includes/_footer

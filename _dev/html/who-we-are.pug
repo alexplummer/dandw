@@ -1,0 +1,37 @@
+extends includes/_header
+
+block title
+	title <cms:editable name='page_title' type='text'>Who we are</cms:editable>
+
+block main
+
+	<cms:template title="Who we are">
+	</cms:template>
+
+	main
+		section.who-we-are
+			.inner
+				article
+					h1 <cms:editable name='whoweare_header' type='text'>Who we are</cms:editable>
+					p <cms:editable name='whoweare_description' type='text'>Here is some information about the people who run Divorce and Wellbeing:</cms:editable>
+
+			.inner
+				.left
+					img(src="img/wwa-ebru.jpg")
+					h2 Ebru Avcioglu
+					<cms:editable name='ebru_description' type='nicedit'>
+						p Ebru is a well-being consultant dedicated to helping people overcome their relationship challenges. She takes a holistic approach to providing practical guidance and promotes wellbeing to achieve successful outcomes. She encourages a positive frame of mind to ensure you identify and maintain focus on what matters most. <br> Ebru received coaching training at City University London and previously developed her career as a commercially-oriented scientist attaining a PhD in environmental engineering and a MSc in renewable energy. She has published numerous widely read articles in well-respected academic journals.</cms:editable>
+					<cms:editable name='ebru_link' type='nicedit'>
+						a.social-li(href="https://www.linkedin.com/in/ebru-avcioglu-8744b822/") https://www.linkedin.com/in/ebru-avcioglu-8744b822/
+					</cms:editable>
+
+				.right
+					img(src="img/wwa-jude.jpg")
+					h2 Judith Benson
+					<cms:editable name='jude_description' type='nicedit'>
+						p Judith is a Barrister who combines her extensive experience in the criminal courts- including domestic violence and controlling and coercive behaviour - with her personal experience of divorce, separation and life as a single Mother. <br>Adopting a holistic approach, she helps you negotiate the legal side of divorce or separation, guiding you to plan a strategy where you will decide together whether to involve or avoid the courts.</cms:editable>
+					<cms:editable name='jude_link' type='nicedit'>
+						
+					</cms:editable>
+					
+	include includes/_footer

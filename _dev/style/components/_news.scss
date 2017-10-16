@@ -1,0 +1,84 @@
+// News
+// ============
+
+.news {
+
+    article {
+        @extend %col-xs-12;
+        @extend %col-sm-8;
+        @extend %col-sm-offset-2;
+
+        h3 {
+            @extend %header-light;
+            max-width: 400px;
+            margin-top: $size-m;
+        }
+        .details {
+            @extend %cf;
+            border-top: 1px solid fade-out($clr-shade,0.66);
+            margin-bottom: $size-m;
+
+            time, p, .addthis_inline_share_toolbox {
+                float: left;
+                font-size: $size-s;
+                clear: none !important;
+                text-transform: uppercase;
+            }
+            time {
+                font-weight: bold;
+                margin-right: $size-m;
+            }
+            .addthis_inline_share_toolbox {
+                position: relative;
+                top: 10px;
+                left: $size-m;
+            }
+        }
+        p:first-of-type {
+            font-weight: bold;
+        }
+        a {
+            max-width: 400px;
+            display: block;
+            word-wrap: break-word;
+        }
+        .news-list {
+
+            .news-entry {
+
+                time {
+                    float: left;
+                    margin-right: $size-m;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+            a {
+                max-width: none;
+                display: inline-block;
+            }
+            .pagination {
+                margin-top: $size-m;
+            }
+        }
+        img {
+            float: left;
+            margin: $size-m $size-m $size-m 0;
+            max-width: 200px;
+        }
+        @media (max-width: 450px) {
+
+            h2 {
+                text-align: center;
+            }
+            img {
+                margin: 0 auto;
+                display: block;
+                float: none;
+            }
+        }
+    }
+}
+.news-home article p:first-of-type {
+    font-weight: 100;
+}

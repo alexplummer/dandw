@@ -1,0 +1,143 @@
+// About
+// ============
+
+.about {
+
+    article {
+        @extend %col-xs-12;
+        @extend %col-sm-7;
+
+        @media (min-width: 992px) {
+            padding-right: $size-l;
+        }
+        > h2 {
+            @extend .h3;
+        }
+        img {
+            margin-bottom: $size-s;
+        }
+    }
+    .third {
+        padding-left: $size-m;
+    }
+    .services {
+        @extend %col-xs-12;
+        @extend %col-sm-5;
+        @extend %col-md-5;
+
+        .call-to-action {
+            @extend %row;
+
+            .call-to-action-content {
+                @extend %col-xs-12;
+                padding: 0;
+
+                h2 {
+                    @extend %header-light;
+                }
+                a {
+                    @extend %icon-before;
+                    display: block;
+                    padding-top: $size-s*1.5;
+                    font-size: $font-m;
+                }
+                a:nth-of-type(1):before {
+                    background-image: url(../img/icon-email.png);
+                }
+                a:nth-of-type(2):before {
+                    background-image: url(../img/icon-phone.png);
+                }
+            }
+        }
+    }
+    .service-list {
+        @extend %row;
+
+        h2 {
+            @extend .h3;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            color: $clr-primary;
+            margin-bottom: $size-m;
+        }
+        .service {
+            @extend %col-xs-6;
+            @extend %col-sm-12;
+            @extend %col-md-6;
+            @extend .highlight-list;
+            padding-left: 0;
+            padding-right: 0;
+            border-right: $size-s solid #fff;
+            border-bottom: $size-s solid #fff;
+            background: $clr-light;
+
+            @media (max-width: 500px) {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+
+            h3 {
+                text-align: center;
+                padding: $size-s 0;
+                margin-bottom: 0;
+
+                &:before {
+                    margin-right: $size-s;
+                }
+            }
+            ul {
+                padding: 0 $size-m*1.25;
+            }
+            li {
+                margin-bottom: 0;
+                font-weight: 100;
+                font-size: $font-s;
+            }
+        }
+    }
+    .personal-story {
+        @extend .media-block-right;
+        margin-top: $size-m;
+
+        .narrative {
+            padding-top: $size-s;
+        }
+        picture {
+            @extend %rounded-image;
+            width: $size-xl*2;
+            height: $size-xl*2;
+        }
+        img, picture {
+            max-height: none;
+            max-width: none;
+        }
+        blockquote p {
+            @extend .h1;
+            @extend %quote-mark;
+            color: $clr-primary;
+            font-weight: 100;
+            float: left;
+            max-width: 300px;
+        }
+        @media (max-width: 450px) {
+
+            h2 {
+                text-align: center;
+            }
+            picture {
+                margin: 0 auto;
+                display: block;
+                float: none;
+            }
+            blockquote p {
+                font-size: $font-l;
+                line-height: 1.1;
+            }
+            .narrative {
+                margin-bottom: $size-l;
+            }
+        }
+    }
+}

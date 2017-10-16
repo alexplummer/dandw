@@ -1,0 +1,82 @@
+extends includes/_header
+
+block title
+	title <cms:editable name='page_title' type='text'>Wellbeing Group</cms:editable>
+
+block main
+
+	<cms:template title="Wellness">
+	</cms:template>
+
+	main
+		section.wellbeing
+			.inner
+				article
+					h1 <cms:editable name='wellbeing_header' type='text'>The Wellbeing Group</cms:editable>
+					
+					<cms:editable name='wellness_img' label='wellness_img' type='image' show_preview='1' hidden='1'></cms:editable>
+					img(src!="<cms:show wellness_img />").wellness-img
+					
+					p <cms:editable name='wellbeing_intro' type='nicedit' buttons='italic,bold,link,unlink,ol,ul,image,subscript,superscript'>We are very excited to announce that we are commencing our Wellbeing Group. We aim to bring people together to help and support each other in turning corners and rebuilding lives for a better and brighter future.<br><br> There will be monthly events where you can meet and share your stories, as well as activities to broaden your horizons, lift your spirits and be inspired by some art and music. We value all our members’ thoughts and contributions so any recommendations would be happily received.<br><br> Our first event will be a ‘Welcome back from Summer’ Drinks in September - date and venue to be announced soon. Watch this space for more news…</cms:editable>
+				
+					div.wellness-event
+						h2 <cms:editable name='wellbeing_event_header' type='text'>Welcome back from Summer</cms:editable>
+						time <cms:editable name='wellbeing_event_date' type='text'>Monday, 9 October 2017</cms:editable>
+						time <cms:editable name='wellbeing_event_time' type='text'>6.30 – 8.30 pm</cms:editable>
+
+						<cms:editable name='wellness_event_description' type='nicedit' buttons='italic,bold,link,unlink,ol,ul,image,subscript,superscript'>
+						h4
+							| Get to know The Wellbeing Group at DWB!
+						p
+							| Come and hear what Divorce and Wellbeing is all about and find out how we help people face relationship challenges and rebuild their lives.  Discover some of the additional services you can access through our professional partners.  Mingle with likeminded people over drinks and snacks, learn a few wellbeing techniques through our interactive group sessions and above all, have fun doing it! <br><br>Event registration starts on 21 August.
+						</cms:editable>
+						<cms:editable name='wellness_eventbrite_description' type='richtext'>
+							a.button(href="") Sign up
+						</cms:editable>
+						br
+						h2 <cms:editable name='wellbeing_findoutmore_header' type='text'>Find out more</cms:editable>
+						<cms:form enctype="multipart/form-data" method="post" class="k_form">
+							label Enter your name (required)
+							br
+							<cms:input type="text" placeholder="Full name" name="name" label="Full name" desc='A text input for your name' maxlength="100" required='1' validator='min_len=3'/>
+							br
+							label Enter your email (required)
+							br
+							<cms:input type="text" name="email" placeholder="Email" label='Email' maxlength="100" validator='email' required='1' />
+							br
+							label Enter a message
+							br
+							<cms:input type="textarea" cols="35" rows="5" name="message" label='Leave a message'></cms:input>
+							br
+							label Enter the code below
+							br
+							<cms:input name='recaptcha' type='recaptcha'/>
+							br
+							br
+							
+							<cms:if k_success >
+								<div class="k_successmessage">
+									<cms:send_mail from=k_email_from to='info@divorceandwellbeing.co.uk' subject='Wellbeing registration'>
+										<cms:show k_success />
+									</cms:send_mail>
+
+									<h3>Message sent</h3>
+									<p>Thanks, your registration has been sent</p>
+								</div>
+							</cms:if>
+
+							<cms:if k_error >
+								<div class="k_errormessage">
+									<ul>
+										<cms:each k_error >
+											<li><cms:show item /></li>
+										</cms:each>
+									</ul>
+								</div>
+							</cms:if>
+							
+							<input type="submit" value="Register" name="submit"/>
+
+						</cms:form>
+
+	include includes/_footer

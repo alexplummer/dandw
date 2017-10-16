@@ -1,0 +1,202 @@
+// Base
+// ============
+
+
+// Layout
+body {
+    padding-top: $nav-height + $size-l;
+
+    @media (max-width: 449px) {
+        padding-top: $size-m*4;
+        overflow-x: hidden;
+    }
+}
+* {
+    transition: all 0.5s ease;
+}
+.overlap {
+    margin-top: - ($nav-height + $size-l);
+}
+main {
+    padding-bottom: $size-l;
+}
+section {
+    @extend %container;
+}
+.inner {
+    @extend %row;
+}
+.split {
+    @extend %col-sm-6;
+}
+
+
+// Images
+img {
+    max-width: 100%;
+}
+
+
+// Icon before
+%icon-before {
+    $nav-icon-size: $font-xl;
+
+    display: inline-block;
+    text-decoration: none;
+    padding: $size-m 0 0 ($nav-icon-size + $size-s);
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: $size-s;
+        height: $nav-icon-size;
+        width: $nav-icon-size;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: $nav-icon-size;
+    }
+}
+
+
+// Media blocks
+.media-block-left, .media-block-right {
+
+    img, picture {
+        max-height: 200px;
+        max-width: 200px;
+    }
+}
+.media-block-left {
+
+    img, picture {
+        float:left;
+        margin: 0 $size-s $size-s 0;
+    }
+}
+.media-block-right {
+
+    img, picture {
+        float:right;
+        margin: 0 0 $size-s $size-s;
+    }
+}
+
+
+// News list
+.news-list {
+
+    h3 {
+        @extend %header-light;
+    }
+}
+
+// Highlight list
+.highlight-list {
+
+    .highlight {
+        background: $clr-light;
+    }
+    header, footer {
+        background: $clr-lighter;
+    }
+    footer {
+        padding: 0 20px 20px 20px;
+    }
+    h3, a {
+        color: $clr-primary;
+    }
+    h2 {
+        @extend %header-light;
+        font-size: $font-l;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0;
+        border-bottom: 0 !important;
+    }
+    h3 {
+        @extend %mid-caps;
+        text-align: center;
+        padding: $size-m 0 0 0;
+    }
+    a {
+        @extend %icon-before;
+        display: block;
+        padding-top: $size-s*1.5;
+        font-size: $font-m;
+        word-wrap: break-word;
+    }
+    a:nth-of-type(1):before {
+        background-image: url(../img/icon-email.png);
+    }
+    a:nth-of-type(2):before {
+        background-image: url(../img/icon-phone.png);
+    }
+    a:hover {
+        color: lighten($clr-primary,10%);
+    }
+    ul {
+        padding-left: $size-l;
+        margin-bottom: $size-m;
+    }
+    li {
+        margin-bottom: 0;
+        font-size: $font-m;
+        font-weight: 100;
+    }
+}
+
+
+// Rounded image
+%rounded-image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: $size-m*6;
+    height: $size-m*6;
+    display: inline-block;
+    position: relative;
+
+    img {
+        position: absolute;
+        left: -25%;
+        margin: 0;
+        height: 100%;
+        width: auto;
+        max-width: none;
+    }
+}
+
+
+// Quote mark
+%quote-mark {
+    position: relative;
+    padding-left: $size-m*1.5;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        font-family: $font-quote;
+        font-size: $font-xxl;
+        content: '“';
+    }
+}
+
+
+// Narrative
+.narrative {
+    background: url(../img/bg-paper.jpg);
+    padding: $size-m;
+    box-shadow: 0 3px 9px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+
+    * {
+        font-family: $font-quote;
+    }
+    strong {
+        @extend .h3;
+        font-family: $font-quote;
+        text-align: center;
+        display: block;
+    }
+}

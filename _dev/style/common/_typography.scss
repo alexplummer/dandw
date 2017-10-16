@@ -1,0 +1,23 @@
+// Typography
+// ============
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+    font-weight: 100;
+}
+h1 {
+    @extend .h2;
+}
+ul {
+    padding-left: $size-m;
+}
+%mid-caps {
+    font-size: $font-m;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+%header-light {
+    font-weight: 100;
+    border-bottom: 1px solid fade-out($clr-shade,0.66);
+    padding-bottom: $size-s;
+}

@@ -1,0 +1,32 @@
+// Contact
+// ============
+
+.who-we-are {
+    article {
+        @extend %col-md-12;
+        border-bottom: 1px solid rgba(63, 71, 71, 0.34);
+        padding-bottom: $size-m;
+        margin-bottom: $size-l;
+
+        p {
+            max-width: 600px;
+        }
+    }
+    .left, .right {
+        @extend %col-md-4;
+        @extend %col-md-offset-1;
+
+        img {
+            width: 30%;
+            float: left;
+            margin: 0 $size-m $size-m 0;
+            border-radius: 10px;
+        }
+    }
+    @media (max-width: 991px) {
+        
+        .right {
+            padding-top: $size-m;
+        }
+    }
+}

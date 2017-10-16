@@ -1,0 +1,86 @@
+// News
+// ============
+
+.wellbeing {
+
+    article {
+        @extend %col-xs-12;
+        @extend %col-sm-8;
+        @extend %col-sm-offset-2;
+
+        h1 {
+            display: block;
+        }
+        p {
+            width: 50%;
+        }
+        h3 {
+            @extend %header-light;
+            max-width: 400px;
+            margin-top: $size-m;
+        }
+        a {
+            max-width: 400px;
+            display: block;
+            word-wrap: break-word;
+
+            &.button {
+                width: auto;
+                max-width: 200px;
+                text-align: center;
+            }
+        }
+        img {
+            float: left;
+            margin: $size-m $size-m $size-m 0;
+            max-width: 50%;
+        }
+        .wellness-img {
+            float: right;
+            margin-left: $size-l;
+            margin-bottom: $size-m;
+            max-width: 40%;
+        }
+        @media (max-width: 450px) {
+
+            h2 {
+                text-align: center;
+            }
+            img {
+                margin: 0 auto;
+                display: block;
+                float: none;
+                max-width: 100%;
+            }
+            .wellness-img {
+                float: none;
+                margin-top: $size-m;
+                margin-left: 0;
+                max-width: 100%;
+            }
+            p {
+                width: 100%;
+            }
+        }
+        .wellness-event {
+            border-top: 1px solid $clr-light;
+            margin-top: $size-l;
+            padding-top: $size-l;
+
+            p, h3, h2, time {
+                width: 600px;
+                max-width: 100%;
+            }
+            time {
+                display: block;
+
+                &:first-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.news-home article p:first-of-type {
+    font-weight: 100;
+}

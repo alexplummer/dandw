@@ -1,0 +1,113 @@
+// Hero
+// ============
+
+.hero {
+    background: url(../img/bg-hero.jpg) no-repeat top right;
+    background-size: cover;
+    padding: ($nav-height + $size-xl) 0 $size-xl 0;
+    border-bottom-left-radius: $container-radius;
+    border-bottom-right-radius: $container-radius;
+    margin-bottom: $size-l;
+
+    @media (max-width:767px) {
+        padding: $size-m*6 0 $size-m*2 0;
+    }
+    @media (max-width:450px) {
+        padding: $size-m*6 0 $size-m 0;
+    }
+    .left {
+        @extend %col-sm-6;
+
+        @media (min-width: 1200px) and (max-width: 1300px) {
+            position: relative;
+            left: $size-m;
+        }
+        @media (max-width:767px) {
+
+            * {
+                display: none;
+            }
+            iframe {
+                display: block;
+                margin-bottom: $size-m;
+            }
+        }
+    }
+    .right {
+        @extend %col-xs-12;
+        @extend %col-sm-6;
+        @extend %col-lg-5;
+        @extend %col-lg-offset-1;
+    }
+    .oversized {
+        padding-top: 0;
+
+        @media (max-width:767px) {
+            padding: 0;
+        }
+        p {
+            @extend .h1;
+            font-size: $font-s*3;
+            line-height: 1.2;
+            color: $clr-primary;
+            max-width: 500px;
+            margin-bottom: $size-m;
+
+            @media (max-width:991px) {
+                font-size: $font-s*3;
+            }
+        }
+        a {
+            @extend .icon;
+            @extend .icon-right-open;
+            font-size: $font-xl;
+            color: #fff;
+            font-family: $font-quote;
+        }
+    }
+    form {
+        background: rgba(250,250,250,0.44);
+        padding: $size-m;
+        border-radius: 5px;
+
+        label {
+            width: 120px;
+            display: inline-block;
+            text-align: right;
+            padding-right: $size-s;
+        }
+        input[type="text"] {
+            width: 300px;
+        }
+        input[type="submit"], button {
+            margin-left: 125px;
+        }
+        h3 {
+            @extend %header-light;
+        }
+        p {
+            margin-bottom: $size-m;
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {
+
+            label {
+                text-align: left;
+            }
+        }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+
+            input[type="text"] {
+                width: 250px;
+            }
+        }
+        @media (max-width: 450px) {
+
+            label {
+                text-align: left;
+            }
+            button {
+                margin-left: 0;
+            }
+        }
+    }
+}

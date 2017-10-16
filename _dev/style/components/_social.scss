@@ -1,0 +1,38 @@
+// Social
+// ============
+
+.social {
+
+    a {
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: cover;
+        display: inline-block;
+        height: 30px;
+        width: 29px;
+        margin: $size-s $size-s 0 0;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .social-fb {
+        background-image: url(../img/icon-fb.png);
+    }
+    .social-tw {
+        background-image: url(../img/icon-tw.png);
+    }
+    .social-li {
+        background-image: url(../img/icon-li.png);
+    }
+    .social-im {
+        background-image: url(../img/icon-in.png);
+    }
+}
+.addthis_inline_share_toolbox {
+
+    span {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+}

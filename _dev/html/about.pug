@@ -1,0 +1,147 @@
+extends includes/_header
+
+block title
+	title <cms:editable name='page_title' type='text'>About</cms:editable>
+
+block main
+
+	<cms:template title="About page">
+	</cms:template>
+
+	main
+		section.about
+			.inner
+				<cms:editable name='about_group' label='About' desc='About section content' type='group'></cms:editable>
+				article
+					h1 <cms:editable name='about_header' type='text' group='about_group'>About Divorce and Wellbeing</cms:editable>
+					h2 <cms:editable name='about_section_header' type='text' group='about_group'>How will we help you?</cms:editable>
+					p <cms:editable name='about_section_intro' type='text' group='about_group'>We will meet you for an initial assessment to understand where you are and will draw you a roadmap tailored to your individual needs. Divorce is a long process which requires endurance and stability. We understand only too well how overwhelming things can seem in difficult times and will provide you with a plan to look after your wellness along your journey. This will help you to stay calm and make the right decisions with the right state of mind. We will meet you on a regular basis to follow up with you and be there to guide you in every step you take.</cms:editable>
+
+					<cms:editable name='about_img' label='about_img' type='image' show_preview='1' hidden='1' group='about_group'></cms:editable>
+					img(src!="<cms:show about_img />")
+
+					h3 <cms:editable name='about_subsection_header' type='text' group='about_group'>In-house legal advice</cms:editable>
+					p <cms:editable name='about_subsection_content' type='text' group='about_group'>Our legal expert will talk you through the legal options; discuss your lawyer’s advice with you; help you prepare for meetings with your solicitor or your barrister and tackle the forms and paperwork with you, saving you time, money and confusion. In an inexpensive and relaxed environment, you are free to ask the 'stupid' questions (there aren't any), to ponder, deliberate and discuss your issues and options with a legal expert who has been there herself and understands how heartache can cloud the picture even for the most clearheaded woman.</cms:editable>
+
+					h3 <cms:editable name='about_subsection_header_2' type='text' group='about_group'>It is all about you</cms:editable>
+					p <cms:editable name='about_subsection_content_2' type='text' group='about_group'>We will work with you from start to finish to provide a bespoke service tailored to your individual needs. We can call on mediators, divorce lawyers, financial advisors, counsellors, therapists for your children, wellness experts and many more. We can even look after your day to day needs taking care of housing, nannies and even the grocery shopping! And when you are ready, we will be there to show you the way back to work or help you in your search for a new partner. We will stay with you until you are in charge of your life again and will be there to celebrate your independence with you.</cms:editable>
+
+					.personal-story
+						<cms:editable name='story_group' label='Story' desc='Story section content' type='group'></cms:editable>
+						.narrative
+							h2 <cms:editable name='story_header' type='text' group='story_group'>My story</cms:editable>
+
+							<cms:editable name='story_img' label='story_img' type='image' show_preview='1' hidden='1' group='story_group'></cms:editable>
+							picture
+								img(src!="<cms:show story_img />")
+
+							p <cms:editable name='story_content' type='text' group='story_group'>I moved to London in the late nineties as a young married woman. In the beginning, it was an exciting experience for both of us, however it wasn't long before my marriage was showing signs that something was wrong. I started feeling isolated and worried, and eventually I faced the inevitability of divorce. Even the simplest of everyday tasks became impossible and my life descended into a living hell. I was feeling desperate and alone with a toddler and baby to look after, with no job or financial security. I was too embarrassed to share the reality with my family who were in another country.</cms:editable>
+							blockquote
+								p <cms:editable name='story_quote' type='text' group='story_group'>Now I feel stronger than ever</cms:editable>
+							p <cms:editable name='story_content_2' type='text' group='story_group'>In a year’s time, a divorce settlement was reached mostly with the support of my dear friends to whom I will always feel indebted. I was through the worst part, but the path was still scary. I had gone from my parents’ home straight into my marriage and felt I had never really had a life of my own. It took me many years to know who I was, build my confidence back and live my life as an independent woman. Now I feel stronger than ever. I have started Divorce and Wellbeing to use my experience to help and support you in your journey so you don’t have to go through this devastating experience on your own.</cms:editable>
+							p
+								strong <cms:editable name='story_author' type='text' group='story_group'>Thanks for reading - Ebru</cms:editable>
+					a(href="#story")
+				.services
+					<cms:editable name='services_group' label='Services' desc='Services section content' type='group'></cms:editable>
+					.service-list
+						h2 <cms:editable name='services_header' type='text' group='services_group'>Our services</cms:editable>
+						.service
+							header
+								h3.icon-address-book Consultation
+							<cms:editable name='services_list_1' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li In-house sessions for personal consultancy
+							</cms:editable>
+
+						.service
+							header
+								h3.icon-hammer Legal
+							<cms:editable name='services_list_2' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li In-house legal advice
+								li Family lawyers
+								li Mediators
+								li Arbitrators
+								li Immigration lawyers
+								li Tax and private client services
+							</cms:editable>
+						.service
+							header
+								h3.icon-dollar Financial
+							<cms:editable name='services_list_3' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li Financial advisors
+								li Accountants
+							</cms:editable>
+						.service
+							header
+								h3.icon-users Therapists
+							<cms:editable name='services_list_4' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li Individual therapy
+								li Marriage counselling
+								li Child and adolescent therapy
+								li Group therapy
+							</cms:editable>
+						.service
+							header
+								h3.icon-tree-2 Wellness
+							<cms:editable name='services_list_5' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li Meditation
+								li Breathing and relaxation
+								li Yoga
+								li Pilates
+								li Retreats
+							</cms:editable>
+						.service
+							header
+								h3.icon-home Housing
+							<cms:editable name='services_list_6' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li Estate agents
+								li Removal companies
+							</cms:editable>
+						.service
+							header
+								h3.icon-child Childcare
+							<cms:editable name='services_list_7' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li Nannies
+							</cms:editable>
+						.service
+							header
+								h3.icon-chat Social
+							<cms:editable name='services_list_8' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li Support groups - monthly events with experts
+								li Workshops for wellbeing
+								li Exclusive socialising events
+							</cms:editable>
+						.service
+							header
+								h3.icon-heart Dating
+							<cms:editable name='services_list_9' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li Advice for dating following separation
+							</cms:editable>
+						.service
+							header
+								h3.icon-briefcase Back to work
+							<cms:editable name='services_list_10' type='nicedit' buttons='italic' group='services_group'>
+							ul
+								li CV writing
+								li Interview techniques
+								li Recruitment agencies
+								li Tailored training for continuous professional development
+							</cms:editable>
+
+					.call-to-action
+						.call-to-action-content
+							h2 <cms:editable name='services_header' type='text' group='services_group'>Contact us today</cms:editable>
+
+							a(href="mailto:"+email).email #{email}
+							a(href="tel:"+phone).phone #{phone}
+
+	include includes/_footer

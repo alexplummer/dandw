@@ -1,0 +1,143 @@
+// Intro thirds
+// ============
+
+.intro-thirds {
+
+    .media-block-left, .highlight-list, .media-block-right {
+        @extend %col-md-4;
+
+        a {
+            @extend .icon;
+            @extend .icon-right-open;
+        }
+    }
+    .highlight-list, .media-block-right {
+        @extend %col-sm-6;
+
+        @media (min-width:600px) and (max-width:767px) {
+            width: 50%;
+            padding-right: $size-m;
+        }
+        @media (max-width:767px) {
+            margin-bottom: $size-l;
+        }
+    }
+    .media-block-left {
+        @extend %col-sm-12;
+
+        h1 {
+            font-size: $font-l;
+            line-height: $size-m;
+            font-weight: 400;
+            margin-bottom: $size-s;
+        }
+        img + p {
+            padding-top: 0;
+        }
+        @media (min-width: 992px) and (max-width: 1200px) {
+
+            picture, img {
+                width: 100%;
+                max-width: none;
+                max-height: none;
+            }
+        }
+        @media (max-width: 400px) {
+
+            picture, img {
+                width: 100%;
+                max-width: none;
+                max-height: none;
+            }
+        }
+        @media (max-width: 991px) {
+            margin-bottom: $size-l;
+        }
+    }
+    .media-block-right {
+        @extend %col-xs-12;
+
+        > h3 {
+            @extend %mid-caps;
+        }
+        > p {
+            font-family: $font-quote;
+        }
+        picture {
+            @extend %rounded-image;
+            width: $size-m*6;
+            height: $size-m*6;
+        }
+        .news-list {
+
+            h3 {
+                @extend %icon-before;
+                margin-top: $size-m;
+                display: block;
+                padding-bottom: $size-s;
+
+                &:before {
+                    background-image: url(../img/icon-news-dark.png);
+                }
+            }
+        }
+    }
+    .highlight-list {
+        @extend .highlight-list;
+        @extend %col-xs-12;
+
+        .lined {
+            padding-top: $size-m;
+            margin-top: $size-m;
+            border-top: 1px solid $clr-primary;
+            color: $clr-primary;
+        }
+    }
+    .home-quotes {
+        padding: 0 0 $size-m $size-m;
+        margin-bottom: $size-m;
+        border-bottom: 1px solid rgba(63, 71, 71, 0.34);
+        position: relative;
+
+        blockquote {
+            display: none;
+
+            &.shown {
+                display: block;
+            }
+        }
+        &:before {
+            content: open-quote;
+            font-size: $font-xxxl;
+            position: absolute;
+            top: -10px;
+            left: -20px;
+        }
+        span {
+            display: block;
+        }
+
+        .pagination {
+            text-align: center;
+
+            a {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 0;
+                border-radius: 50%;
+                border: 1px solid #222;
+                margin: 0 $size-m 0 0;
+                padding: 0;
+
+                &:before {
+                    display: none;
+                }
+
+                &.active {
+                    background: #000;
+                }
+            }
+        }
+    }
+}

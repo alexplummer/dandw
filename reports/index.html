@@ -1,0 +1,131 @@
+<!DOCTYPE html><html><head>    <meta charset="utf-8"/>    <title>Lint Reports</title>    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">    <style>    * {font-family: 'Baloo Chettan', cursive;}    pre {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 18px}    h3 {color: #6f0a0a;}    p {font-size: 18px;}    .stop {text-decoration: underline; cursor: pointer}    </style></head><body>    <div class="container">        <h1>Lint Reports</h1>        <p class='message'>Tab closes in <span class="time"></span> seconds, <span class="stop">click here</span> to keep open</p>        <br>        <div class="panel panel-default">            <div class="panel-heading">                <h3><span class="glyphicon glyphicon-exclamation-sign"></span> JSHint Errors</h3>            </div>            <div class="panel-body">                <div class="col-md-12">                    <pre class="lines"><!-- inject:jsReport -->
+51 lint errors found in _dev\script\form.php
+  [1,1](E030) Expected an identifier and instead saw '<'.
+  [1,2](E033) Expected an operator and instead saw '?'.
+  [1,2](W030) Expected an assignment or function call and instead saw an expression.
+  [1,3](W033) Missing semicolon.
+  [1,3](W030) Expected an assignment or function call and instead saw an expression.
+  [1,6](W033) Missing semicolon.
+  [138,50](W116) Expected ')' and instead saw 'as'.
+  [138,52](W033) Missing semicolon.
+  [138,53](W030) Expected an assignment or function call and instead saw an expression.
+  [138,59](W033) Missing semicolon.
+  [138,59](E030) Expected an identifier and instead saw ')'.
+  [138,59](W030) Expected an assignment or function call and instead saw an expression.
+  [138,60](W033) Missing semicolon.
+  [142,19](W069) ['email'] is better written in dot notation.
+  [142,49](W069) ['email'] is better written in dot notation.
+  [145,10](W069) ['email'] is better written in dot notation.
+  [145,36](W069) ['email'] is better written in dot notation.
+  [147,26](W069) ['email'] is better written in dot notation.
+  [147,66](W069) ['email'] is better written in dot notation.
+  [147,101](W069) ['email'] is better written in dot notation.
+  [147,137](W069) ['email'] is better written in dot notation.
+  [147,161](E030) Expected an identifier and instead saw ']'.
+  [147,163](E033) Expected an operator and instead saw '='.
+  [147,165](E020) Expected ']' to match '[' from line 147 and instead saw 'Email address is invalid'.
+  [147,165](W030) Expected an assignment or function call and instead saw an expression.
+  [147,237](W069) ['email'] is better written in dot notation.
+  [147,350](E030) Expected an identifier and instead saw ']'.
+  [147,352](E033) Expected an operator and instead saw '='.
+  [147,354](E020) Expected ']' to match '[' from line 147 and instead saw 'Email address is invalid'.
+  [147,354](W030) Expected an assignment or function call and instead saw an expression.
+  [147,427](W041) Use '===' to compare with '0'.
+  [147,441](E030) Expected an identifier and instead saw ']'.
+  [147,443](E033) Expected an operator and instead saw '='.
+  [147,445](E020) Expected ']' to match '[' from line 147 and instead saw 'Email address is invalid'.
+  [147,445](W030) Expected an assignment or function call and instead saw an expression.
+  [147,571](E030) Expected an identifier and instead saw ']'.
+  [147,573](E033) Expected an operator and instead saw '='.
+  [147,575](E020) Expected ']' to match '[' from line 147 and instead saw 'Email address is invalid'.
+  [147,575](W030) Expected an assignment or function call and instead saw an expression.
+  [147,633](W116) Expected ')' and instead saw 'as'.
+  [147,635](W033) Missing semicolon.
+  [147,636](W030) Expected an assignment or function call and instead saw an expression.
+  [147,642](W033) Missing semicolon.
+  [147,642](E030) Expected an identifier and instead saw ')'.
+  [147,642](W030) Expected an assignment or function call and instead saw an expression.
+  [147,643](W033) Missing semicolon.
+  [147,717](E030) Expected an identifier and instead saw ']'.
+  [147,719](E033) Expected an operator and instead saw '='.
+  [147,721](E020) Expected ']' to match '[' from line 147 and instead saw 'Email address is invalid'.
+  [147,721](W030) Expected an assignment or function call and instead saw an expression.
+  [147,721](E043) Too many errors. (57% scanned).
+<!-- endinject --></pre>                </div>            </div>        </div>        <div class="panel panel-default">            <div class="panel-heading">                <h3><span class="glyphicon glyphicon-exclamation-sign"></span> CSSLint Errors</h3>            </div>            <div class="panel-body">                <div class="col-md-12">                    <pre class="lines"><!-- inject:cssReport -->
+csslint: There are 19 problems in /Users/aplummer/Desktop/dnw/_dev/style/style.css.
+style.css
+1: warning at line 1340, col 1
+Attribute selectors with ^= are slow!
+[class^="icon-"]:before, [class*=" icon-"]:before {
+style.css
+2: warning at line 1340, col 1
+Unqualified attribute selectors are known to be slow.
+[class^="icon-"]:before, [class*=" icon-"]:before {
+style.css
+3: warning at line 1340, col 26
+Unqualified attribute selectors are known to be slow.
+[class^="icon-"]:before, [class*=" icon-"]:before {
+style.css
+4: warning at line 1340, col 26
+Attribute selectors with *= are slow!
+[class^="icon-"]:before, [class*=" icon-"]:before {
+style.css
+5: warning at line 1479, col 3
+Use of !important
+  border-bottom: 0 !important; }
+style.css
+6: warning at line 1562, col 3
+Fallback border-bottom (hex or RGB) should precede RGBA border-bottom.
+  border-bottom: 1px solid rgba(63, 71, 71, 0.34);
+style.css
+7: warning at line 1660, col 5
+Fallback border-bottom (hex or RGB) should precede RGBA border-bottom.
+    border-bottom: 1px solid rgba(63, 71, 71, 0.34); }
+style.css
+8: warning at line 1740, col 3
+Fallback border (hex or RGB) should precede RGBA border.
+  border: 1px solid rgba(0, 0, 0, 0.3);
+style.css
+9: warning at line 1741, col 21
+Values of 0 shouldn't have units specified.
+  box-shadow: inset 0px 3px 1px 0px rgba(0, 0, 0, 0.15); }
+style.css
+10: warning at line 1741, col 33
+Values of 0 shouldn't have units specified.
+  box-shadow: inset 0px 3px 1px 0px rgba(0, 0, 0, 0.15); }
+style.css
+11: warning at line 1768, col 3
+Fallback background (hex or RGB) should precede RGBA background.
+  background: rgba(250, 250, 250, 0.9);
+style.css
+12: warning at line 1789, col 5
+The properties padding-top, padding-bottom, padding-left, padding-right can be replaced by padding.
+    body > header nav a {
+style.css
+13: warning at line 1946, col 5
+Fallback background (hex or RGB) should precede RGBA background.
+    background: rgba(250, 250, 250, 0.44);
+style.css
+14: warning at line 2029, col 3
+Fallback border-bottom (hex or RGB) should precede RGBA border-bottom.
+  border-bottom: 1px solid rgba(63, 71, 71, 0.34);
+style.css
+15: warning at line 2056, col 46
+Element (a.active) is overqualified, just use .active without element name.
+      .intro-thirds .home-quotes .pagination a.active {
+style.css
+16: warning at line 2064, col 3
+Fallback border-top (hex or RGB) should precede RGBA border-top.
+  border-top: 1px solid rgba(63, 71, 71, 0.34);
+style.css
+17: warning at line 2069, col 5
+Use of !important
+    clear: none !important;
+style.css
+18: warning at line 2205, col 3
+Fallback border-bottom (hex or RGB) should precede RGBA border-bottom.
+  border-bottom: 1px solid rgba(63, 71, 71, 0.34);
+style.css
+19: warning
+Too many floats (12), you're probably using them for layout. Consider using a grid system instead.
+<!-- endinject --></pre>                </div>            </div>        </div>    </div><script>var pre = document.querySelectorAll('pre'), i;for (i = 0; i < pre.length; ++i) {    //pre[i].innerHTML = fmt;}function countdown() {    // your code goes here    var count = 10;    var timerId = setInterval(function() {        count--;        document.querySelector('.time').innerHTML = count;        if(count == 0) {            // your code goes here            window.close();        }    }, 1000);    document.querySelector('.stop').addEventListener("click", function (event) {        clearInterval(timerId);        document.querySelector('.message').parentNode.removeChild(document.querySelector('.message'));    });}countdown();</script></body></html>

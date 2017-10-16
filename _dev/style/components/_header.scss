@@ -1,0 +1,189 @@
+// Header
+// ============
+
+body > header {
+    @extend %cf;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(250,250,250,0.9);
+    border-bottom-left-radius: $container-radius;
+    border-bottom-right-radius: $container-radius;
+    padding: $size-s;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.23);
+
+    .logo-main {
+        height: $size-m*3;
+        margin-right: $size-m;
+        float: left;
+
+        @media (max-width: 1260px) {
+            margin-right: $size-m;
+        }
+        @media (max-width: 450px) {
+            height: $size-l;
+            position: relative;
+            left: -$size-l;
+        }
+    }
+    nav {
+        float: left;
+        position: relative;
+        top: $size-s;
+
+        a {
+            @extend %mid-caps;
+            @extend %icon-before;
+            padding-left: $size-m*1.3;
+            font-size: $font-xs;
+            border-right: 1px solid #ddd;
+            margin-right: $size-s;
+            padding-right: $size-s;
+            padding-top: $size-s;
+            padding-bottom: $size-s;
+
+            &:before {
+                top: 0;
+                background-size: 25px;
+            }
+            &:last-of-type {
+                border: 0;
+                padding-right: 0;
+                margin-right: 0;
+            }
+            &:nth-child(1):before {
+                background-image: url(../img/icon-home.png);
+            }
+            &:nth-child(2):before {
+                background-image: url(../img/icon-about.png);
+            }
+            &:nth-child(3):before {
+                background-image: url(../img/icon-contact.png);
+            }
+            &:nth-child(4):before {
+                background-image: url(../img/icon-news.png);
+            }
+            &:nth-child(5):before {
+                background-image: url(../img/icon-user.png);
+                background-size: 23px;
+            }
+            &:nth-child(6):before {
+                background-image: url(../img/icon-wellness.png);
+            }
+        }
+        @media (max-width: 1430px) {
+
+            a {
+                margin-right: $size-m;
+            }
+
+        }
+        @media (max-width: 1375px) {
+
+            a {
+                padding-left: 0;
+                margin-right: $size-l;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        @media (max-width: 1135px) {
+            display: none;
+        }
+    }
+    .social {
+        float: right;
+        position: relative;
+        top: 8px;
+
+        @media (max-width: 1135px) {
+            display: none;
+        }
+    }
+}
+.nav-mobile {
+    display: none;
+
+    @media (max-width: 1135px) {
+        display: block;
+        background: $clr-primary;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: -300px;
+        height: 100%;
+        width: 300px;
+
+        &.shown {
+            left: 0;
+        }
+
+        nav a {
+            $nav-icon-size: $font-xl;
+            font-size: $font-m;
+            font-weight: bold;
+            text-transform: uppercase;;
+            color: #fff;
+            display: block;
+            margin-bottom: 0;
+            text-decoration: none;
+            padding: $size-m $size-m $size-m ($nav-icon-size + $size-s);
+            margin-left: $size-s;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: $size-s;
+                height: $nav-icon-size;
+                width: $nav-icon-size;
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: $nav-icon-size;
+            }
+
+            &:nth-child(1):before {
+                background-image: url(../img/icon-home.png);
+            }
+            &:nth-child(2):before {
+                background-image: url(../img/icon-about.png);
+            }
+            &:nth-child(3):before {
+                background-image: url(../img/icon-contact.png);
+            }
+            &:nth-child(4):before {
+                background-image: url(../img/icon-news.png);
+            }
+            &:nth-child(5):before {
+                background-image: url(../img/icon-user.png);
+            }
+            &:nth-child(6):before {
+                background-image: url(../img/icon-wellness.png);
+            }
+        }
+        .social {
+            position: absolute;
+            bottom: $size-s;
+            left: $size-s;
+        }
+    }
+}
+.icon-menu {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 1135px) {
+        display: block;
+        font-size: $font-xl;
+        color: $clr-link;
+        position: absolute;
+        top: $size-s*1.5;
+        right: $size-m;
+    }
+    @media (max-width: 450px) {
+        top: $size-xs;
+    }
+}

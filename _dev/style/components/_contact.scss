@@ -1,0 +1,94 @@
+// Contact
+// ============
+
+.contact {
+
+    article, .highlight-list {
+        @extend %col-xs-12;
+
+        @media (max-width: 767px) {
+            margin-bottom: $size-l;
+        }
+    }
+    article {
+        @extend %col-sm-7;
+        padding-right: $size-l;
+
+        img {
+            margin-bottom: $size-s;
+        }
+    }
+    .highlight-list {
+        @extend %col-sm-5;
+    }
+    .contact-quotes {
+        padding: 0 0 $size-m $size-m;
+        margin-bottom: $size-m;
+        position: relative;
+
+        blockquote {
+            border-bottom: 1px solid rgba(63, 71, 71, 0.34);
+        }
+        &:before {
+            content: open-quote;
+            font-size: $font-xxxl;
+            position: absolute;
+            top: -10px;
+            left: -20px;
+        }
+        span {
+            display: block;
+        }
+    }
+    form {
+        padding-top: $size-m;
+
+        label {
+            width: 160px;
+            display: inline-block;
+            text-align: right;
+            padding-right: $size-s;
+            vertical-align: top;
+        }
+        input[type="text"] {
+            width: 300px;
+        }
+        input[type="submit"] {
+            margin-left: 165px;
+        }
+        h3 {
+            @extend %header-light;
+        }
+        p {
+            margin-bottom: $size-m;
+        }
+        @media (min-width: 1200px) and (max-width: 1400px) {
+
+            input[type="text"] {
+                width: 250px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {
+
+            label {
+                text-align: left;
+            }
+        }
+        @media (max-width: 560px) {
+
+            label {
+                text-align: left;
+            }
+            input, textarea {
+                display: block;
+            }
+            textarea {
+                max-width: 100%;
+                width: 100%;
+            }
+            input[type="submit"] {
+                margin-left: 0;
+            }
+        }
+    }
+}

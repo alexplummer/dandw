@@ -1,0 +1,55 @@
+
+// Setup
+// ============
+// Modify these files for each new site
+
+@import "setup/_setup";
+
+
+// Library
+// ============
+// Standard, non-changing variables and mixins
+
+/* csslint ignore:start */
+@import "library/_normalize";
+@import "library/_base-typography";
+@import "library/mixins/_flexbox";
+@import "library/mixins/_grid";
+@import "library/mixins/_clearfix";
+@import "library/mixins/_iconfix";
+/* csslint ignore:end */
+
+
+// Fontello
+// ============
+// Pulls in fontello CSS
+
+@import "fontello/fontello";
+
+
+// Vars
+// ============
+// Common SASS shared between components
+
+@import "common/_vars.scss";
+@import "common/_base.scss";
+@import "common/_typography.scss";
+
+
+// Components
+// ============
+// User components, these are auto injected by Gulp
+
+/* inject:imports */
+@import "components/_about.scss";
+@import "components/_contact.scss";
+@import "components/_footer.scss";
+@import "components/_forms.scss";
+@import "components/_header.scss";
+@import "components/_hero.scss";
+@import "components/_intro-thirds.scss";
+@import "components/_news.scss";
+@import "components/_social.scss";
+@import "components/_wellbeing.scss";
+@import "components/_who-we-are.scss";
+/* endinject */

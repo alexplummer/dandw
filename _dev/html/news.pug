@@ -1,0 +1,59 @@
+extends includes/_header
+
+block title
+	title <cms:editable name='page_title' type='text'>News</cms:editable>
+
+block main
+
+	<cms:template title="News home">
+	</cms:template>
+
+	main
+		section.news.news-home
+			.inner
+				article
+					h1 <cms:editable name='news_header' type='text'>Our latest news</cms:editable>
+
+					p <cms:editable name='news_description' type='text'> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </cms:editable>
+
+					.news-list
+						h3 Top stories
+						<cms:pages masterpage="news-article.php" paginate="1" limit="5">
+							.news-entry
+								time <cms:date k_page_date format='jS M, y'/>
+								a(href!="<cms:show k_page_link />") <cms:show k_page_title />
+
+							<cms:if k_paginated_bottom>
+								.pagination
+									<cms:if k_paginate_link_prev>
+										a(href!="<cms:show k_paginate_link_prev />").button
+											| Previous stories
+										|</cms:if>
+									<cms:if k_paginate_link_next>
+										a(href!="<cms:show k_paginate_link_next />").button
+											| Newer stories
+									</cms:if>
+							</cms:if>
+						</cms:pages>
+
+						.news-list
+							h3 Latest blog posts
+							<cms:pages masterpage="blog-article.php" paginate="1" limit="5">
+								.news-entry
+									time <cms:date k_page_date format='jS M, y'/>
+									a(href!="<cms:show k_page_link />") <cms:show k_page_title />
+
+								<cms:if k_paginated_bottom>
+									.pagination
+										<cms:if k_paginate_link_prev>
+											a(href!="<cms:show k_paginate_link_prev />").button
+												| Previous stories
+											|</cms:if>
+										<cms:if k_paginate_link_next>
+											a(href!="<cms:show k_paginate_link_next />").button
+												| Newer stories
+										</cms:if>
+								</cms:if>
+							</cms:pages>
+
+	include includes/_footer
